@@ -12,13 +12,13 @@ env.make_interactive(port=6666, realtime=True)
 obs = env.reset()
 
 done = False
-#net_reward = 0
-
-while not done:
-    action = env.action_space.sample()
-    obs, reward, done, _ = env.step(action)
+net_reward = 0
 
 """ while not done:
+    action = env.action_space.sample()
+    obs, reward, done, _ = env.step(action) """
+
+while not done:
     action = env.action_space.noop()
 
     action['camera'] = [0, 0.03*obs["compassAngle"]]
@@ -31,5 +31,5 @@ while not done:
         action)
 
     net_reward += reward
-    print("Total reward: ", net_reward) """
+    print("Total reward: ", net_reward)
 
