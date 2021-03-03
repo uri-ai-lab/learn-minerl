@@ -1,2 +1,2 @@
 # learn-minerl
-code and docs for working with mineRL
+AI Lab repo for code samples and documentation to help in learning to use [MineRL](https://minerl.io), a large scale dataset for machine learning experiments based on Minecraft user interactions.  
