@@ -20,12 +20,13 @@ sudo apt-get install openjdk-8-jdk
 conda create -n mineRL-py36 python=3.6
 ```
 
--Activate conda MineRL environment
+-Activate python evironment for MineRL
 ```
 conda activate mineRL-py36
 ```
 
 -Install MineRL and dependecies
+    (Must set env verable MINERL_DATA_ROOT after installation, this directory will contain training data)
 ```
 pip3 install --upgrade minerl
 conda install tqdm
@@ -33,7 +34,7 @@ pip3 install scikit-learn
 pip3 install pyglet==1.5.11
 ```
 
--Manually editting files
+-Files that need Manual editing
 
 https://github.com/minerllabs/minerl/issues/450#issuecomment-777009360
 
