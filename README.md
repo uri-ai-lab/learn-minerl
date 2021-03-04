@@ -4,6 +4,7 @@ AI Lab repo for code samples and documentation to help users of [MineRL](https:/
 ## MineRL Installation
 
 Operating System: Ubuntu 18.04.5 LTS
+
 Python Version:   Python 3.6.13 :: Anaconda, Inc.
 
 -Install conda
