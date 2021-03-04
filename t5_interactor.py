@@ -3,7 +3,7 @@ import gym
 
 env = gym.make('MineRLNavigateDense-v0')
 
-# python -m minerl.interactor 6666
+# Type in another terminal to connect to miecraft server: python -m minerl.interactor 6666
 
 # set the environment to allow interactive connections on port 6666
 # and slow the tick speed to 6666.
@@ -14,9 +14,7 @@ obs = env.reset()
 done = False
 net_reward = 0
 
-""" while not done:
-    action = env.action_space.sample()
-    obs, reward, done, _ = env.step(action) """
+# Code bellow  is from the no-op example in 'https://minerl.io/docs/tutorials/first_agent.html#no-op-actions-and-a-better-policy'
 
 while not done:
     action = env.action_space.noop()
