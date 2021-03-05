@@ -1,0 +1,41 @@
+diff -ruN --exclude=.DS_Store minerl/env/Malmo/Minecraft/build.gradle minerl.NEW/env/Malmo/Minecraft/build.gradle
+--- minerl/env/Malmo/Minecraft/build.gradle	2021-03-04 08:51:23.000000000 -0500
++++ minerl.NEW/env/Malmo/Minecraft/build.gradle	2021-03-04 09:24:57.000000000 -0500
+@@ -70,7 +70,7 @@
+ repositories {
+     maven {
+         name = "SpongePowered Repo"
+-        url = "http://repo.spongepowered.org/maven/"
++        url = "https://repo.spongepowered.org/maven/"
+     }
+     maven { url 'https://jitpack.io' }
+ }
+@@ -327,4 +327,4 @@
+     include ('*.jar')
+ }
+ 
+-javadoc.dependsOn copyMds
+\ No newline at end of file
++javadoc.dependsOn copyMds
+diff -ruN --exclude=.DS_Store minerl/env/core.py minerl.NEW/env/core.py
+--- minerl/env/core.py	2021-03-04 08:51:23.000000000 -0500
++++ minerl.NEW/env/core.py	2021-03-04 10:18:14.000000000 -0500
+@@ -362,14 +362,13 @@
+ 
+         obs_dict = recursive_update(obs_dict, info)
+ 
+-        self._last_pov = obs_dict['pov']
+-        self._last_obs = obs_dict
+-        
+-
+         # Now we wrap
+         if isinstance(self.env_spec, EnvWrapper):
+             obs_dict = self.env_spec.wrap_observation(obs_dict)
+-
++        
++        self._last_pov = obs_dict['pov']
++        self._last_obs = obs_dict
++        
+         return obs_dict
+ 
+     def _process_action(self, action_in) -> str:
